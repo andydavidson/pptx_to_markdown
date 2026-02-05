@@ -194,7 +194,7 @@ Examples:
     # Check if markitdown is available
     try:
         subprocess.run(
-            ['python', '-m', 'markitdown', '--help'],
+            ['python3', '-m', 'markitdown', '--help'],
             capture_output=True,
             check=True
         )
