@@ -65,7 +65,7 @@ def convert_pptx_to_markdown(pptx_path, output_dir, keep_images=False):
     # Convert using markitdown
     try:
         result = subprocess.run(
-            ['python', '-m', 'markitdown', str(pptx_path)],
+            ['python3', '-m', 'markitdown', str(pptx_path)],
             capture_output=True,
             text=True,
             check=True
@@ -113,6 +113,8 @@ def batch_convert(input_dir, output_dir, keep_images=False):
     
     # Find all PPTX files
     pptx_files = list(input_dir.glob("*.pptx"))
+    print(f"\nFiles to convert: ")
+    print(*pptx_files, sep=' - ')
     
     if not pptx_files:
         print(f"❌ No .pptx files found in {input_dir}")
@@ -168,13 +170,13 @@ Examples:
     
     parser.add_argument(
         '-i', '--input-dir',
-        default='~/pptx',
+        default=str(Path.home() / "pptx"),
         help='Input directory containing PPTX files (default: ~/pptx)'
     )
     
     parser.add_argument(
         '-o', '--output-dir',
-        default='~/pptx',
+        default=str(Path.home() / "pptx"),
         help='Output directory for markdown files (default: ~/pptx)'
     )
     
