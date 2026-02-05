@@ -168,14 +168,14 @@ Examples:
     
     parser.add_argument(
         '-i', '--input-dir',
-        default='/mnt/user-data/uploads',
-        help='Input directory containing PPTX files (default: /mnt/user-data/uploads)'
+        default='~/pptx',
+        help='Input directory containing PPTX files (default: ~/pptx)'
     )
     
     parser.add_argument(
         '-o', '--output-dir',
-        default='/mnt/user-data/outputs',
-        help='Output directory for markdown files (default: /mnt/user-data/outputs)'
+        default='~/pptx',
+        help='Output directory for markdown files (default: ~/pptx)'
     )
     
     parser.add_argument(
