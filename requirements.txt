@@ -1,1 +1,4 @@
 markitdown[pptx]>=0.1.4
+easyocr>=1.7.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
